@@ -300,9 +300,9 @@ header.home {
   text-transform: uppercase;
   color: #555;
   letter-spacing: 1px;
-  font-size: 0.8em;
+  font-size: 1em;
   display: inline-block;
-  width: 80px;
+  width: 100px;
 }
 
 .author .author-image {
