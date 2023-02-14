@@ -1,12 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 @import url("https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap");
 @import url(syntax/monokai.css);
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
 
 :root {
   --blue: #007bff;
@@ -64,7 +59,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans KR"; /*, "Nanum Myeongjo", serif;*/
+  font-family: "Noto Serif KR", serif;
   color: #2c3e50;
 }
 
