@@ -1,13 +1,27 @@
 ---
 layout: post
-title: post-sample
+title: 파이썬으로 데스크탑 SN 출력하기
 date: 2020-01-02 19:20:23 +0900
-category: sample
+category: python
 ---
-# post-sample
-> Hello!
 
-This is code
-```ruby
-print 'hello world'
+데스크탑 제품번호를 추출해내는 방법입니다.
+
+cmd에서 wmic 명령어로 제품키를 가져오는게 가능한데
+
+이를 응용해 subprocess 모듈로 결과값을 가져오고
+
+필요한 값만 잘라서 가져왔습니다.
+
+```python
+import subprocess
+
+sn = subprocess.run('WMIC CSPRODUCT GET IDENTIFYINGNUMBER', stdout=subprocess.PIPE)
+sn = sn.stdout.decode('utf-8')
+sn = sn.replace('\n', '') # \n 삭제
+sn = sn.replace('\r', '') # \r 삭제
+sn = sn.replace(' ','') # # 띄어쓰기 삭제
+sn = sn[17:] # 슬라이싱
+
+print(sn)
 ```
