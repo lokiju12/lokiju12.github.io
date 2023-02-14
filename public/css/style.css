@@ -102,7 +102,7 @@ code {
   flex: 1 1 auto;
   padding: 0px 30px;
   color: #fff;
-  background-color: #333;
+  background-color: #fff;
 }
 
 .sidebar {
@@ -179,7 +179,7 @@ a.nav-item:hover {
 .post-link {
   margin-left: 10px;
   font-size: 110%;
-  color: #333;
+  color: #fff;
 }
 
 #contact-list li .fa,
@@ -265,7 +265,7 @@ article h4,
 article h5,
 article h6 {
   font-family: "Do Hyeon", sans-serif;
-  color: #333;
+  color: #fff;
   margin-bottom: 0;
 }
 
