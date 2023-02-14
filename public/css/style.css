@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap");
 @import url(syntax/monokai.css);
 @import url("https://fonts.googleapis.com/css2?family=Stylish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
 :root {
   --blue: #007bff;
@@ -30,8 +31,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Stylish", sans-serif;
-  --font-family-serif: "Stylish", sans-serif;
+  --font-family-sans-serif: "Do Hyeon", sans-serif;
+  --font-family-serif: "Do Hyeon", sans-serif;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Stylish", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   font-size: 15px;
   color: #2c3e50;
 }
@@ -124,7 +125,7 @@ code {
 
 .sidebar-brand > a {
   font-size: 300%;
-  font-family: "Stylish", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   color: #fff;
 }
 
@@ -143,7 +144,7 @@ code {
 
 .nav-title {
   font-size: 120%;
-  font-family: "Stylish", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   text-transform: uppercase;
   border-bottom: 1px solid gray;
   margin-bottom: 5px;
@@ -151,7 +152,7 @@ code {
 
 a.nav-item {
   font-size: 120%;
-  font-family: "Stylish", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   text-transform: capitalize;
   color: #aaa;
 }
@@ -261,7 +262,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  font-family: "Stylish", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   color: #333;
   margin-bottom: 0;
 }
