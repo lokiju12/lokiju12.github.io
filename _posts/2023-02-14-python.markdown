@@ -2,7 +2,7 @@
 layout: post
 title: 파이썬으로 데스크탑 SN 출력하기
 date: 2023-02-14 19:20:23 +0900
-category: python
+category: programing python
 ---
 
 데스크탑 제품번호를 추출해내는 방법입니다.
