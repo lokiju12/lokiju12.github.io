@@ -16,11 +16,6 @@
         </a>
         <span class="post-date">{{ post.date | date: date_format }}</span>
 
-        <!-- <span class="post-date">{{ post.date | date: date_format }}</span>
-				<a class="post-link" href="{{ post.url | relative_url }}">
-					{{ post.title | escape }}
-				</a> -->
-
         {%- if site.show_excerpts -%}{{ post.excerpt }}{%- endif -%}
       </li>
       {%- endfor -%}

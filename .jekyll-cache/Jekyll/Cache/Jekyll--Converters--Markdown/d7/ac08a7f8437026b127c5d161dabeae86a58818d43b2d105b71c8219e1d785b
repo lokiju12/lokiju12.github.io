@@ -1,0 +1,24 @@
+I"�<p>업무중 다수 사용자의 모니터 정보 확인을 하기 위해 만들어봄</p>
+
+<p>powershell 명령어로 모니터 정보를 확인할 수 있는 것을 확인하고</p>
+
+<p>powershell의 결과값을 subprocess.run을 이용해 꺼내왔다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="c1"># 모니터 1 정보
+</span><span class="n">monitor1</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'powershell </span><span class="se">\n</span><span class="s"> [System.Text.Encoding]::ASCII.GetString($(Get-CimInstance WmiMonitorID -Namespace root</span><span class="err">\</span><span class="s">wmi)[0].SerialNumberID -notmatch 0)'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># 엔터제거
+</span><span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r제거
+</span>
+<span class="c1"># 모니터 2 정보
+</span><span class="n">monitor2</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'powershell </span><span class="se">\n</span><span class="s"> [System.Text.Encoding]::ASCII.GetString($(Get-CimInstance WmiMonitorID -Namespace root</span><span class="err">\</span><span class="s">wmi)[1].SerialNumberID -notmatch 0)'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># 엔터제거
+</span><span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r제거
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'1번 모니터 정보 : '</span> <span class="o">+</span> <span class="n">monitor1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2번 모니터 정보 : '</span> <span class="o">+</span> <span class="n">monitor2</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

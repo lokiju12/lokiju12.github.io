@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="HangWoo" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>HangWoo</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">HangWoo</a>
+	</div>
+	<p class="lead">재미로 하는 블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#bat">
+				<span class="name">bat</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#python">
+				<span class="name">python</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#pyautogui">
+				<span class="name">pyautogui</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			python으로 모니터의 SerialNumber 정보 가져오기
+		</div>
+		<time class="post-date dt-published" datetime="2023-02-15T09:00:00+09:00" itemprop="datePublished">2023/02/15
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<p>업무중 다수 사용자의 모니터 정보 확인을 하기 위해 만들어봄</p>
+
+<p>powershell 명령어로 모니터 정보를 확인할 수 있는 것을 확인하고</p>
+
+<p>powershell의 결과값을 subprocess.run을 이용해 꺼내왔다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="c1"># 모니터 1 정보
+</span><span class="n">monitor1</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'powershell </span><span class="se">\n</span><span class="s"> [System.Text.Encoding]::ASCII.GetString($(Get-CimInstance WmiMonitorID -Namespace root</span><span class="err">\</span><span class="s">wmi)[0].SerialNumberID -notmatch 0)'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># 엔터제거
+</span><span class="n">monitor1</span> <span class="o">=</span> <span class="n">monitor1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r제거
+</span>
+<span class="c1"># 모니터 2 정보
+</span><span class="n">monitor2</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'powershell </span><span class="se">\n</span><span class="s"> [System.Text.Encoding]::ASCII.GetString($(Get-CimInstance WmiMonitorID -Namespace root</span><span class="err">\</span><span class="s">wmi)[1].SerialNumberID -notmatch 0)'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># 엔터제거
+</span><span class="n">monitor2</span> <span class="o">=</span> <span class="n">monitor2</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r제거
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'1번 모니터 정보 : '</span> <span class="o">+</span> <span class="n">monitor1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'2번 모니터 정보 : '</span> <span class="o">+</span> <span class="n">monitor2</span><span class="p">)</span>
+</code></pre></div></div>
+
+	</div>
+</article>
+
+<br /><br /><br /><br /><br />
+
+<script
+  src="https://utteranc.es/client.js"
+  repo="lokiju12/blog"
+  issue-term="pathname"
+  label="Comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async
+></script>
+
+		</div>
+	</div>
+  </body>
+</html>

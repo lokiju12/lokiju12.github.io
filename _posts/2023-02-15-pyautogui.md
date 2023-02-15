@@ -2,7 +2,7 @@
 layout: post
 title: pyautogui 마우스 자동화 기본 사용법
 date: 2023-02-15 10:00:00 +0900
-category: python
+categories: pyautogui
 ---
 
 ### 라이브러리 설치

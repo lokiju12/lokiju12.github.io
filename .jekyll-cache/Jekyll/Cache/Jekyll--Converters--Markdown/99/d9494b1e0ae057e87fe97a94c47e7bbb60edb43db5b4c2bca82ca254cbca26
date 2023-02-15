@@ -1,0 +1,48 @@
+I"�<h3 id="라이브러리-설치">라이브러리 설치</h3>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">pip</span> <span class="kd">install</span> <span class="kd">pyautogui</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="size모니터-해상도-사이즈-출력">size:모니터 해상도 사이즈 출력</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="position현재-마우스-위치-출력">position:현재 마우스 위치 출력</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">position</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="moveto원하는-좌표로-마우스-이동">moveTo:원하는 좌표로 마우스 이동</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># x 300, y 300의 좌표로 마우스 즉시 이동
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="c1"># x 300, y 300의 좌표로 마우스를 10초간 이동
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="click마우스-클릭하기">click:마우스 클릭하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">()</span> <span class="c1"># 좌클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">button</span><span class="o">=</span><span class="s">'right'</span><span class="p">)</span> <span class="c1"># 우클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">doubleClick</span><span class="p">()</span> <span class="c1"># 더블클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">click</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">interval</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># 1초 간격으로 10번 클릭
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="dragto마우스-드래그하기">dragTo:마우스 드래그하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">pyautogui</span><span class="o">.</span><span class="n">dragTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

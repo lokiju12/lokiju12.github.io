@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="HangWoo" /></head>
+<style>@import url(/public/css/syntax/monokai.css);</style>
+  <title>HangWoo</title>
+  <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <link href="/public/css/style.css" rel="stylesheet">
+  <body>
+  	<div class="container"> 
+		<div class="sidebar">
+			<div class="sidebar-item sidebar-header">
+	<div class='sidebar-brand'>
+		<a href="/about/">HangWoo</a>
+	</div>
+	<p class="lead">재미로 하는 블로그</p></div>
+
+<div class="sidebar-item sidebar-nav">
+	<ul class="nav">
+      <li class="nav-title">Pages</li>
+	  <li>
+	  	<a class="nav-item" href="/">Articles</a>
+	  </li>
+	  
+	  
+	    
+	  
+	    
+	      
+	        <li>
+	        	<a class="nav-item" href="/about/">
+	            	About
+	            </a>
+	        </li>
+	      
+	    
+	  
+	    
+	      
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-nav">
+  	<ul class="nav">
+			<li class="nav-title">Categories</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#bat">
+				<span class="name">bat</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#python">
+				<span class="name">python</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#pyautogui">
+				<span class="name">pyautogui</span>
+				<span class="badge">2</span>
+	    	</a>
+ 		</li>
+	    
+	  </nav>
+	</ul>
+</div>
+
+<div class="sidebar-item sidebar-footer">
+	<p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a></p>
+</div>
+		</div>
+		<div class="content">
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			pyautogui 마우스 자동화 기본 사용법
+		</div>
+		<time class="post-date dt-published" datetime="2023-02-15T10:00:00+09:00" itemprop="datePublished">2023/02/15
+		</time>		
+	</header>
+
+	<div class="post-content">
+		<h3 id="라이브러리-설치">라이브러리 설치</h3>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">pip</span> <span class="kd">install</span> <span class="kd">pyautogui</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="size모니터-해상도-사이즈-출력">size:모니터 해상도 사이즈 출력</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">size</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="position현재-마우스-위치-출력">position:현재 마우스 위치 출력</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">position</span><span class="p">())</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="moveto원하는-좌표로-마우스-이동">moveTo:원하는 좌표로 마우스 이동</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># x 300, y 300의 좌표로 마우스 즉시 이동
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="c1"># x 300, y 300의 좌표로 마우스를 10초간 이동
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="click마우스-클릭하기">click:마우스 클릭하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">()</span> <span class="c1"># 좌클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">button</span><span class="o">=</span><span class="s">'right'</span><span class="p">)</span> <span class="c1"># 우클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">doubleClick</span><span class="p">()</span> <span class="c1"># 더블클릭
+</span><span class="n">pyautogui</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">click</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">interval</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># 1초 간격으로 10번 클릭
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="dragto마우스-드래그하기">dragTo:마우스 드래그하기</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyautogui</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">pyautogui</span><span class="o">.</span><span class="n">dragTo</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+
+	</div>
+</article>
+
+<br /><br /><br /><br /><br />
+
+<script
+  src="https://utteranc.es/client.js"
+  repo="lokiju12/blog"
+  issue-term="pathname"
+  label="Comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async
+></script>
+
+		</div>
+	</div>
+  </body>
+</html>

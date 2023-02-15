@@ -1,7 +1,8 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 @import url("https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap");
 @import url(syntax/monokai.css);
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
 :root {
   --blue: #007bff;
@@ -30,8 +31,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Noto Serif KR", serif;
-  --font-family-serif: "Noto Serif KR", serif;
+  --font-family-sans-serif: "Hahmlet", serif;
+  --font-family-serif: "Hahmlet", serif;
 }
 
 * {
@@ -59,8 +60,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Noto Serif KR", serif;
-  font-size: 15px;
+  font-family: "Hahmlet", serif;
+  font-size: 18px;
   color: #2c3e50;
 }
 
@@ -125,14 +126,15 @@ code {
 }
 
 .sidebar-brand > a {
-  font-size: 300%;
-  font-family: "Noto Serif KR", serif;
+  font-size: 200%;
+  font-family: "Black Han Sans", sans-serif;
   color: #fff;
 }
 
 .lead {
-  font-size: 120%;
+  font-size: 130%;
   color: #aaa;
+  padding-top: 30px;
 }
 
 .sidebar-header {
@@ -144,16 +146,16 @@ code {
 }
 
 .nav-title {
-  font-size: 150%;
-  font-family: "Noto Serif KR", serif;
+  font-size: 130%;
+  font-family: "Hahmlet", serif;
   text-transform: uppercase;
   border-bottom: 1px solid gray;
   margin-bottom: 5px;
 }
 
 a.nav-item {
-  font-size: 150%;
-  font-family: "Noto Serif KR", serif;
+  font-size: 130%;
+  font-family: "Hahmlet", serif;
   text-transform: capitalize;
   color: #aaa;
 }
@@ -177,7 +179,7 @@ a.nav-item:hover {
 
 .post-link {
   margin-left: 10px;
-  font-size: 110%;
+  font-size: 120%;
   color: #fff;
 }
 
@@ -245,11 +247,12 @@ article img {
 }
 
 blockquote {
-  color: #828282;
+  color: #aaa;
   border-left: 4px solid #ccc;
   padding-left: 10px;
   margin: 0;
   margin-bottom: 15px;
+  font-size: 23px;
 }
 
 p {
@@ -263,7 +266,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Hahmlet", serif;
   color: #fff;
   margin-bottom: 0;
 }
@@ -300,9 +303,9 @@ header.home {
 
 .post-date {
   text-transform: uppercase;
-  color: #fff;
+  color: #aaa;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 0.8em;
   display: inline-block;
   width: 100px;
 }
@@ -318,7 +321,7 @@ footer {
 }
 
 .sidebar-footer {
-  margin-top: 80px;
+  margin-top: 500px;
   font-size: 0.75em;
   font-weight: lighter;
   font-family: "Roboto";

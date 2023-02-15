@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="han's" /></head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="HangWoo" /></head>
 <style>@import url(/public/css/syntax/monokai.css);</style>
-  <title>han's</title>
+  <title>HangWoo</title>
   <!-- <link href="/public/css/bootstrap.min.css" rel="stylesheet"> -->
 
   <link href="/public/css/style.css" rel="stylesheet">
@@ -13,9 +13,9 @@
 		<div class="sidebar">
 			<div class="sidebar-item sidebar-header">
 	<div class='sidebar-brand'>
-		<a href="/about/">han's</a>
+		<a href="/about/">HangWoo</a>
 	</div>
-	<p class="lead">Themed by ejjoo</p></div>
+	<p class="lead">재미로 하는 블로그</p></div>
 
 <div class="sidebar-item sidebar-nav">
 	<ul class="nav">
@@ -55,8 +55,8 @@
 			<li class="nav-title">Categories</li>
 	    
 	    <li>
-	    	<a class="nav-item" href="/category/#windows">
-				<span class="name">windows</span>
+	    	<a class="nav-item" href="/category/#bat">
+				<span class="name">bat</span>
 				<span class="badge">2</span>
 	    	</a>
  		</li>
@@ -64,6 +64,13 @@
 	    <li>
 	    	<a class="nav-item" href="/category/#python">
 				<span class="name">python</span>
+				<span class="badge">5</span>
+	    	</a>
+ 		</li>
+	    
+	    <li>
+	    	<a class="nav-item" href="/category/#pyautogui">
+				<span class="name">pyautogui</span>
 				<span class="badge">2</span>
 	    	</a>
  		</li>
@@ -80,18 +87,27 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			BAT 파일로 IP 변경하기
+			bat 파일로 IP 변경하기
 		</div>
 		<time class="post-date dt-published" datetime="2023-02-12T09:00:00+09:00" itemprop="datePublished">2023/02/12
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<p>다수 사용자의 IP 변경을 편하게 하려고 만들어 봤습니다.</p>
+		<p>다수 사용자의 IP 변경 일일이 설명하지 않고 편하게 하려고 만들어 봤습니다.</p>
 
-<blockquote>
-  <p>IP 입력</p>
-</blockquote>
+<ol>
+  <li>name : 네트워크 어댑터 이름</li>
+  <li>ip : ip address</li>
+  <li>subnet : subnetmask</li>
+  <li>gw : gateway</li>
+  <li>dns1 : 주dns</li>
+  <li>dns2 : 보조 dns</li>
+</ol>
+
+<p>입력 값을 “이더넷”과 같이 고정 값을 부여하면</p>
+
+<p>사용자 측에서 입력할 부분이 줄어 더욱 편하게 사용이 가능합니다.</p>
 
 <div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">::변수설정</span>
 
@@ -116,6 +132,18 @@
 <span class="nb">netsh</span> <span class="na">-c </span><span class="kd">int</span> <span class="kd">ip</span> <span class="kd">set</span> <span class="kd">dns</span> <span class="kd">name</span><span class="o">=</span><span class="err">%</span>\_if_name<span class="err">%</span> <span class="kd">static</span> <span class="s2">"</span><span class="err">%</span><span class="s2">\_dns1</span><span class="err">%</span><span class="s2">"</span> <span class="kd">primary</span>
 
 <span class="nb">netsh</span> <span class="na">-c </span><span class="kd">int</span> <span class="kd">ip</span> <span class="kd">add</span> <span class="kd">dns</span> <span class="kd">name</span><span class="o">=</span><span class="err">%</span>\_if_name<span class="err">%</span> <span class="s2">"</span><span class="err">%</span><span class="s2">\_dns2</span><span class="err">%</span><span class="s2">"</span> <span class="kd">index</span><span class="o">=</span><span class="m">2</span>
+</code></pre></div></div>
+
+<p><br /><br /></p>
+
+<p>gateway는 ip와 같은 값을 가지는 부분을 ip에서 잘라오고</p>
+
+<p>동일한 값을 가지는 부분은 고정값으로 설정해주면</p>
+
+<p>IP만 입력해서 전체 설정을 변경하는 것이 가능합니다.</p>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">::IP / SUBNET / GATEWAY 변경부분 (IP에서 필요한 값을 가져와 Gateway .254와 붙이기)</span>
+<span class="nb">netsh</span> <span class="kd">interface</span> <span class="kd">ip</span> <span class="kd">set</span> <span class="kd">address</span> <span class="nv">%_if_name%</span> <span class="kd">static</span> <span class="nv">%_ip%</span> <span class="nv">%_subnet%</span> <span class="err">%</span>_ip:<span class="o">~</span><span class="m">0</span><span class="o">,</span><span class="m">8</span><span class="err">%</span>.254
 </code></pre></div></div>
 
 	</div>

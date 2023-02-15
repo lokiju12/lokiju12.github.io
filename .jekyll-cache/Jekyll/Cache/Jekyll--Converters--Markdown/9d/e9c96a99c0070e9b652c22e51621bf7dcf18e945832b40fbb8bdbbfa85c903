@@ -1,0 +1,15 @@
+I"n<p>아래 코드를 입력하면 dir을 userprofile의 desktop으로 연결해 쓸 수 있고</p>
+
+<p>바로 가기를 바탕 화면에 떨구거나 바탕 화면의 데이터를 가져올 때 유용하게 사용하고 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'~</span><span class="err">\</span><span class="s">desktop))</span><span class="err">
+</span></code></pre></div></div>
+
+<p><br />
+예제 : 실행한 경로에 같이 저장된 test.csv를 dir의 경로로 복사</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

@@ -84,26 +84,45 @@
 </div>
 		</div>
 		<div class="content">
-			<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+			<article class="post">
+	<header class="post-header">
+		<div class="post-title"> 
+			python에서 UserProfile 경로로 접근하는 방법
+		</div>
+		<time class="post-date dt-published" datetime="2023-02-15T09:00:00+09:00" itemprop="datePublished">2023/02/15
+		</time>		
+	</header>
 
-<div class="container">
-  <h1>404</h1>
+	<div class="post-content">
+		<p>아래 코드를 입력하면 dir을 userprofile의 desktop으로 연결해 쓸 수 있고</p>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<p>바로 가기를 바탕 화면에 떨구거나 바탕 화면의 데이터를 가져올 때 유용하게 사용하고 있습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'~</span><span class="err">\</span><span class="s">desktop))</span><span class="err">
+</span></code></pre></div></div>
+
+<p><br />
+예제 : 실행한 경로에 같이 저장된 test.csv를 dir의 경로로 복사</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span>
+</code></pre></div></div>
+
+	</div>
+</article>
+
+<br /><br /><br /><br /><br />
+
+<script
+  src="https://utteranc.es/client.js"
+  repo="lokiju12/blog"
+  issue-term="pathname"
+  label="Comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async
+></script>
 
 		</div>
 	</div>

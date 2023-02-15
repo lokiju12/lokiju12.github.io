@@ -1,0 +1,11 @@
+I"<p>소켓 모듈을 활용해 호스트 이름과 IP를 추출해 보여준다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">hostname</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span>
+<span class="n">ip_address</span> <span class="o">=</span> <span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">hostname</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'hostname : '</span><span class="o">+</span><span class="n">hostname</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'ip address : '</span><span class="o">+</span><span class="n">ip_address</span><span class="p">)</span>
+</code></pre></div></div>
+:ET
