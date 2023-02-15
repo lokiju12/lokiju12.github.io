@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## Han's IT Blog
+![profile](1.jpg){: width="10% height="10"}
 
 > IT에 관심만 많은 사람입니다.
 >
