@@ -176,6 +176,7 @@ a.nav-item:hover {
 }
 
 .post-list > li {
+  padding-bottom: 10px;
 }
 
 .post-link {
