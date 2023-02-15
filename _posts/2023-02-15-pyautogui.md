@@ -5,7 +5,7 @@ date: 2023-02-15 10:00:00 +0900
 category: python
 ---
 
-라이브러리 설치
+1. 라이브러리 설치
 
 ```bat
 pip install pyautogui
@@ -13,7 +13,7 @@ pip install pyautogui
 
 <br>
 
-모니터 해상도 사이즈 출력
+2. size:모니터 해상도 사이즈 출력
 
 ```python
 print(pyautogui.size())
@@ -21,7 +21,7 @@ print(pyautogui.size())
 
 <br>
 
-현재 마우스 위치 출력
+3. position:현재 마우스 위치 출력
 
 ```python
 print(pyautogui.position())
@@ -29,7 +29,7 @@ print(pyautogui.position())
 
 <br>
 
-원하는 좌표로 마우스 이동
+4. moveTo:원하는 좌표로 마우스 이동
 
 ```python
 # x 300, y 300의 좌표로 마우스 즉시 이동
@@ -41,7 +41,7 @@ pyautogui.moveTo(300, 300, 10)
 
 <br>
 
-마우스 클릭하기
+5. click:마우스 클릭하기
 
 ```python
 pyautogui.click() # 좌클릭
@@ -52,7 +52,7 @@ pyautogui.click(click = 10, interval = 1) # 1초 간격으로 10번 클릭
 
 <br>
 
-마우스 드래그하기
+6. dragTo:마우스 드래그하기
 
 ```python
 pyautogui.moveTo(300, 300)
