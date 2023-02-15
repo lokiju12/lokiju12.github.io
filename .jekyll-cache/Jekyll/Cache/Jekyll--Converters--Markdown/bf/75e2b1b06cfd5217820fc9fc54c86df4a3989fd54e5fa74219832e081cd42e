@@ -1,0 +1,20 @@
+I"h	<p>데스크탑 제품번호를 추출해내는 방법입니다.</p>
+
+<p>cmd에서 wmic 명령어로 제품키를 가져오는게 가능한데</p>
+
+<p>이를 응용해 subprocess 모듈로 결과값을 가져오고</p>
+
+<p>필요한 값만 잘라서 가져왔습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">sn</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'WMIC CSPRODUCT GET IDENTIFYINGNUMBER'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">sn</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">sn</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \n 삭제
+</span><span class="n">sn</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r 삭제
+</span><span class="n">sn</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">' '</span><span class="p">,</span><span class="s">''</span><span class="p">)</span> <span class="c1"># # 띄어쓰기 삭제
+</span><span class="n">sn</span> <span class="o">=</span> <span class="n">sn</span><span class="p">[</span><span class="mi">17</span><span class="p">:]</span> <span class="c1"># 슬라이싱
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sn</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

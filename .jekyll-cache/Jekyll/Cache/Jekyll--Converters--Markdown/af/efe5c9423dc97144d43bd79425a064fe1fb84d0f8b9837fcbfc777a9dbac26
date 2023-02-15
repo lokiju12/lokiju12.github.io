@@ -1,0 +1,28 @@
+I"�<p>현재 로그인된 도메인과 로그인 계정 정보를 가져옵니다.</p>
+
+<p>cmd에서 wmic 명령어로 제품키를 가져오는게 가능한데</p>
+
+<p>이를 응용해 subprocess 모듈로 결과값을 가져오고</p>
+
+<p>필요한 값만 잘라서 가져왔습니다.</p>
+
+<p>현재 사용자 PC 정보를 추출하는 용도로 잘 사용중입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="c1"># 도메인 정보 확인
+</span><span class="n">domain</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'wmic computersystem get domain /format:list'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">domain</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="n">domain</span> <span class="o">=</span> <span class="n">domain</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="s">''</span><span class="p">)</span> <span class="c1"># 엔터제거
+</span><span class="n">domain</span> <span class="o">=</span> <span class="n">domain</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r 불필요 항목 제거
+</span><span class="n">domain</span> <span class="o">=</span> <span class="n">domain</span><span class="p">[</span><span class="mi">7</span><span class="p">:]</span> <span class="c1"># 앞자리 제거
+</span><span class="k">print</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
+
+<span class="c1"># 사용자 정보
+</span><span class="nb">id</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">'whoami'</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+<span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\r</span><span class="s">'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span> <span class="c1"># \r 불필요 항목 제거
+</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">[</span><span class="nb">id</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">'</span><span class="se">\\</span><span class="s">'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span><span class="s">''</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</code></pre></div></div>
+:ET

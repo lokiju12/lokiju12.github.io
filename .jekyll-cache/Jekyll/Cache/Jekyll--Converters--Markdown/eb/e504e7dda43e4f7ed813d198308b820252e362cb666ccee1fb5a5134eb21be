@@ -1,0 +1,31 @@
+I"�	<p>다수 사용자의 IP 변경을 편하게 하려고 만들어 봤습니다.</p>
+
+<blockquote>
+  <p>IP 입력</p>
+</blockquote>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">::변수설정</span>
+
+<span class="kd">set</span> \_if_name<span class="o">=</span><span class="s2">"이더넷"</span>
+
+<span class="kd">set</span> <span class="na">/p </span>\_ip<span class="o">=</span>아이피주소:
+
+<span class="kd">set</span> <span class="na">/p </span>\_subnet<span class="o">=</span>서브넷마스크:
+
+<span class="kd">set</span> <span class="na">/p </span>\_gw<span class="o">=</span>게이트웨이:
+
+<span class="kd">set</span> <span class="na">/p </span>\_dns1<span class="o">=</span>주 <span class="kd">DNS</span>:
+
+<span class="kd">set</span> <span class="na">/p </span>\_dns2<span class="o">=</span>보조 <span class="kd">DNS</span>:
+
+<span class="c">::IP / SUBNET / GATEWAY 변경부분</span>
+
+<span class="nb">netsh</span> <span class="kd">interface</span> <span class="kd">ip</span> <span class="kd">set</span> <span class="kd">address</span> <span class="err">%</span>\_if_name<span class="err">%</span> <span class="kd">static</span> <span class="err">%</span>\_ip<span class="err">%</span> <span class="err">%</span>\_subnet<span class="err">%</span> <span class="err">%</span>\_gw<span class="err">%</span>
+
+<span class="c">:: DNS 변경부분</span>
+
+<span class="nb">netsh</span> <span class="na">-c </span><span class="kd">int</span> <span class="kd">ip</span> <span class="kd">set</span> <span class="kd">dns</span> <span class="kd">name</span><span class="o">=</span><span class="err">%</span>\_if_name<span class="err">%</span> <span class="kd">static</span> <span class="s2">"</span><span class="err">%</span><span class="s2">\_dns1</span><span class="err">%</span><span class="s2">"</span> <span class="kd">primary</span>
+
+<span class="nb">netsh</span> <span class="na">-c </span><span class="kd">int</span> <span class="kd">ip</span> <span class="kd">add</span> <span class="kd">dns</span> <span class="kd">name</span><span class="o">=</span><span class="err">%</span>\_if_name<span class="err">%</span> <span class="s2">"</span><span class="err">%</span><span class="s2">\_dns2</span><span class="err">%</span><span class="s2">"</span> <span class="kd">index</span><span class="o">=</span><span class="m">2</span>
+</code></pre></div></div>
+:ET

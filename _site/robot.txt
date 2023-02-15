@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+#DaumWebMasterTool:6fe5a072e9a40eceaad63329eb9e5cfd873e7ca2cc202b73651afd804ec70a5a:mireczYEQhm/co8jWkRCNA==
+
+Sitemap: https://lokiju12.github.io/sitemap.xml
+
