@@ -15,3 +15,4 @@ plugins:
   - jekyll-feed
 category_dir: category/
 tag_dir: tag/
+timezone: Asia/Seoul
