@@ -1,9 +1,13 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:500&subset=latin,latin-ext);
 @import url("https://fonts.googleapis.com/css?family=Gelasio|Kulim+Park|Nanum+Myeongjo|Nanum+Gothic|Noto+Sans|Noto+Sans+KR|Roboto&display=swap");
 @import url(syntax/monokai.css);
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&family=Nanum+Gothic&display=swap");
+/*
+font-family: 'Inconsolata', monospace;
+font-family: 'Nanum Gothic', sans-serif;
+ */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -31,8 +35,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Hahmlet", serif;
-  --font-family-serif: "Hahmlet", serif;
+  --font-family-sans-serif: "Nanum Gothic", sans-serif;
+  --font-family-serif: "Nanum Gothic", sans-serif;
 }
 
 * {
@@ -60,7 +64,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Hahmlet", serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 18px;
   color: #2c3e50;
 }
@@ -85,12 +89,19 @@ pre {
 }
 
 code {
-  font-family: "Consolas", monospace;
-  font-size: 0.9em;
+  font-family: "Inconsolata", monospace;
+  font-size: 1em;
+  color: #fff;
   margin: 0px;
   /* 코드블록부분 */
-  color: rgb(204, 204, 146);
-  background-color: black;
+}
+
+.highlighter-rouge {
+  background-color: rgb(0, 0, 0);
+  color: goldenrod;
+  font-size: 1.1em;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
 }
 
 .container {
@@ -151,7 +162,7 @@ code {
 
 .nav-title {
   font-size: 130%;
-  font-family: "Hahmlet", serif;
+  font-family: "Nanum Gothic", sans-serif;
   text-transform: uppercase;
   border-bottom: 1px solid gray;
   margin-bottom: 5px;
@@ -159,7 +170,7 @@ code {
 
 a.nav-item {
   font-size: 130%;
-  font-family: "Hahmlet", serif;
+  font-family: "Nanum Gothic", sans-serif;
   text-transform: capitalize;
   color: #aaa;
 }
@@ -271,7 +282,7 @@ article h3,
 article h4,
 article h5,
 article h6 {
-  font-family: "Hahmlet", serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: #fff;
   margin-bottom: 0;
 }
@@ -303,7 +314,7 @@ header.home {
 .post-title {
   font-size: 2.5em;
   color: #fff;
-  font-family: "Hahmlet", serif;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 .post-date {
