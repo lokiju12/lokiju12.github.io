@@ -95,27 +95,36 @@
 			<article class="post">
 	<header class="post-header">
 		<div class="post-title"> 
-			python에서 UserProfile 경로로 접근하는 방법
+			edge 브라우저를 기본 설정으로 되돌리기
 		</div>
-		<time class="post-date dt-published" datetime="2023-02-15T09:00:00+09:00" itemprop="datePublished">2023/02/15
+		<time class="post-date dt-published" datetime="2023-02-16T08:00:00+09:00" itemprop="datePublished">2023/02/16
 		</time>		
 	</header>
 
 	<div class="post-content">
-		<p>아래 코드를 입력하면 dir을 userprofile의 desktop으로 연결해 쓸 수 있고</p>
+		<p>브라우저 문제가 있을 경우 기본 값으로 되돌리는 방법 입니다.</p>
 
-<p>바로 가기를 바탕 화면에 떨구거나 바탕 화면의 데이터를 가져올 때 유용하게 사용하고 있습니다.</p>
+<ol>
+  <li>edge 브라우저를 실행</li>
+  <li>우측 상단의 <code class="highlighter-rouge">[...]</code> 버튼 또는 단축키 <code class="highlighter-rouge">alt+F</code>를 클릭합니다.</li>
+  <li>메뉴 리스트 중 <code class="highlighter-rouge">설정(단축키:S)</code>를 클릭하면 설정으로 이동 됩니다.</li>
+  <li>설정 메뉴 중 <code class="highlighter-rouge">원래대로 설정</code>을 클릭합니다.</li>
+  <li>표시되는 항목 중 설정을 <code class="highlighter-rouge">기본값으로 복원</code>을 누르고 초기화를 클릭하면
+브라우저가 초기화 됩니다.</li>
+</ol>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">'~</span><span class="err">\</span><span class="s">desktop))</span><span class="err">
-</span></code></pre></div></div>
+<p><br /><br />
+브라우저 쿠키 삭제 방법</p>
 
-<p><br />
-예제 : 실행한 경로에 같이 저장된 test.csv를 dir의 경로로 복사</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">shutil</span>
-<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s">'test.csv'</span><span class="p">,</span> <span class="nb">dir</span><span class="p">)</span>
-</code></pre></div></div>
+<ol>
+  <li>edge 브라우저를 실행</li>
+  <li>우측 상단의 <code class="highlighter-rouge">[...]</code> 버튼 또는 단축키 <code class="highlighter-rouge">alt+F</code>를 클릭합니다.</li>
+  <li>메뉴 리스트 중 <code class="highlighter-rouge">설정(단축키:S)</code>를 클릭하면 설정으로 이동 됩니다.</li>
+  <li>설정 메뉴 중 <code class="highlighter-rouge">쿠키 및 사이트 권한</code>을 클릭합니다.</li>
+  <li>표시되는 항목 중 <code class="highlighter-rouge">쿠키 및 사이트 데이터 관리 및 삭제</code>를 클릭합니다.</li>
+  <li><code class="highlighter-rouge">모든 쿠키 및 사이트 데이터 보기</code>를 클릭합니다.</li>
+  <li><code class="highlighter-rouge">모든 제거</code>를 클릭하면 쿠키가 삭제됩니다.</li>
+</ol>
 
 	</div>
 </article>

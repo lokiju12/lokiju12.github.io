@@ -5,9 +5,72 @@
     <description>재미로 하는 블로그</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Feb 2023 08:15:23 +0900</pubDate>
-    <lastBuildDate>Thu, 16 Feb 2023 08:15:23 +0900</lastBuildDate>
+    <pubDate>Thu, 16 Feb 2023 09:37:24 +0900</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2023 09:37:24 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>windows 시스템 파일 복구 (dism &amp; sfc)</title>
+        <description>&lt;p&gt;윈도우에서 시스템 파일 손상을 검사하고 손상된 파일이 있다면 복원해주는 기능입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bat highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;dism.exe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;/online /cleanup-image /restorehealth
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;윈도우에서 보호된 시스템 파일을 검색하고 손상된 파일이 있다면
+system32\dllcache의 파일을 복사해 복원해줍니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bat highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sfc&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;/scannow
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;명령 프롬프트에서 입력해야 합니다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Feb 2023 08:00:00 +0900</pubDate>
+        <link>http://localhost:4000/windows/2023/02/16/sfc,dism.html</link>
+        <guid isPermaLink="true">http://localhost:4000/windows/2023/02/16/sfc,dism.html</guid>
+        
+        
+        <category>windows</category>
+        
+      </item>
+    
+      <item>
+        <title>edge 브라우저를 기본 설정으로 되돌리기</title>
+        <description>&lt;p&gt;브라우저 문제가 있을 경우 기본 값으로 되돌리는 방법 입니다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;edge 브라우저를 실행&lt;/li&gt;
+  &lt;li&gt;우측 상단의 &lt;code class=&quot;highlighter-rouge&quot;&gt;[...]&lt;/code&gt; 버튼 또는 단축키 &lt;code class=&quot;highlighter-rouge&quot;&gt;alt+F&lt;/code&gt;를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;메뉴 리스트 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;설정(단축키:S)&lt;/code&gt;를 클릭하면 설정으로 이동 됩니다.&lt;/li&gt;
+  &lt;li&gt;설정 메뉴 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;원래대로 설정&lt;/code&gt;을 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;표시되는 항목 중 설정을 &lt;code class=&quot;highlighter-rouge&quot;&gt;기본값으로 복원&lt;/code&gt;을 누르고 초기화를 클릭하면
+브라우저가 초기화 됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+브라우저 쿠키 삭제 방법&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;edge 브라우저를 실행&lt;/li&gt;
+  &lt;li&gt;우측 상단의 &lt;code class=&quot;highlighter-rouge&quot;&gt;[...]&lt;/code&gt; 버튼 또는 단축키 &lt;code class=&quot;highlighter-rouge&quot;&gt;alt+F&lt;/code&gt;를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;메뉴 리스트 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;설정(단축키:S)&lt;/code&gt;를 클릭하면 설정으로 이동 됩니다.&lt;/li&gt;
+  &lt;li&gt;설정 메뉴 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;쿠키 및 사이트 권한&lt;/code&gt;을 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;표시되는 항목 중 &lt;code class=&quot;highlighter-rouge&quot;&gt;쿠키 및 사이트 데이터 관리 및 삭제&lt;/code&gt;를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;모든 쿠키 및 사이트 데이터 보기&lt;/code&gt;를 클릭합니다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;모든 제거&lt;/code&gt;를 클릭하면 쿠키가 삭제됩니다.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Thu, 16 Feb 2023 08:00:00 +0900</pubDate>
+        <link>http://localhost:4000/windows/2023/02/16/edge.html</link>
+        <guid isPermaLink="true">http://localhost:4000/windows/2023/02/16/edge.html</guid>
+        
+        
+        <category>windows</category>
+        
+      </item>
     
       <item>
         <title>pyautogui 키보드 자동화 기본 사용법</title>

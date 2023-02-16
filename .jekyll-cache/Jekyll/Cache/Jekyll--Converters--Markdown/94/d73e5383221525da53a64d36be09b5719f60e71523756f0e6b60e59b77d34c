@@ -1,0 +1,21 @@
+I"�<p>브라우저 문제가 있을 경우 기본 값으로 되돌리는 방법 입니다.</p>
+
+<ol>
+  <li><code class="highlighter-rouge">edge 브라우저</code>를 실행</li>
+  <li>우측 상단의 <code class="highlighter-rouge">[...]</code> 버튼 또는 단축키 <code class="highlighter-rouge">alt+F</code>를 누른다.</li>
+  <li>메뉴 리스트 중 <code class="highlighter-rouge">설정(단축키:S)</code>를 누르면 설정으로 이동 됩니다.</li>
+  <li>설정 메뉴 중 <code class="highlighter-rouge">원래대로 설정</code>을 누릅니다.</li>
+  <li>표시되는 항목 중 <code class="highlighter-rouge">설정을 기본값으로 복원</code>을 누르고 <code class="highlighter-rouge">초기화</code>를 누르면<br />
+브라우저가 초기화 됩니다.</li>
+</ol>
+
+<p><br /><br />
+브라우저 쿠키 삭제 방법</p>
+
+<ol>
+  <li><code class="highlighter-rouge">edge 브라우저</code>를 실행</li>
+  <li>우측 상단의 <code class="highlighter-rouge">[...]</code> 버튼 또는 단축키 <code class="highlighter-rouge">alt+F</code>를 누른다.</li>
+  <li>메뉴 리스트 중 <code class="highlighter-rouge">설정(단축키:S)</code>를 누르면 설정으로 이동 됩니다.
+4.</li>
+</ol>
+:ET

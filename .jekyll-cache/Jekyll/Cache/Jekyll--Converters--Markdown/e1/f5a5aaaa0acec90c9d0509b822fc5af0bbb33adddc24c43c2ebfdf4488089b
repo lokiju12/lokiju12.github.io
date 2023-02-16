@@ -1,0 +1,17 @@
+I"<p>윈도우에서 시스템 파일 손상을 검사하고 손상된 파일이 있다면 복원해주는 기능입니다.</p>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dism.exe</span> <span class="na">/online /cleanup-image /restorehealth
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<p>윈도우에서 보호된 시스템 파일을 검색하고 손상된 파일이 있다면
+system32\dllcache의 파일을 복사해 복원해줍니다.</p>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sfc</span> <span class="na">/scannow
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<p>명령 프롬프트에서 입력해야 합니다.</p>
+:ET
