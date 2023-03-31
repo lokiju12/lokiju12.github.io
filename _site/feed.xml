@@ -5,9 +5,22 @@
     <description>재미로 하는 블로그</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Feb 2023 14:18:53 +0900</pubDate>
-    <lastBuildDate>Thu, 16 Feb 2023 14:18:53 +0900</lastBuildDate>
+    <pubDate>Thu, 16 Feb 2023 15:48:27 +0900</pubDate>
+    <lastBuildDate>Thu, 16 Feb 2023 15:48:27 +0900</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>코베아 퀀텀 III</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://img.danawa.com/prod_img/500000/538/294/img/5294538_1.jpg?shrink=500:500&amp;amp;_v=20201215172753&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Feb 2023 08:00:00 +0900</pubDate>
+        <link>http://localhost:4000/item/2023/02/16/camp.html</link>
+        <guid isPermaLink="true">http://localhost:4000/item/2023/02/16/camp.html</guid>
+        
+        
+        <category>item</category>
+        
+      </item>
     
       <item>
         <title>windows 시스템 파일 복구 (dism &amp; sfc)</title>
